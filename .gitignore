@@ -1,0 +1,7 @@
+mysql/mysql/*
+gitea/gitea/*
+redis/master/data/*
+redis/slave/data/*
+elk/elasticsearch/*
+elk/filebeat/*
+elk/logstash/*

@@ -1,0 +1,24 @@
+version: '3'
+services:
+  redis:
+    image: docker.io/library/redis:5.0.8
+    container_name: redis-master
+    ports:
+      - "6380:6379"
+    volumes:
+      - "./redis.conf:/usr/local/etc/redis/redis.conf"
+      - "./data:/data"
+    restart: always
+    command: redis-server /usr/local/etc/redis/redis.conf
+    networks:
+      - service_net
+    deploy:
+     resources:
+       limits:
+         cpus: '0.39'
+         memory: 800M
+
+networks:
+  service_net:
+   external:
+      name: service_default

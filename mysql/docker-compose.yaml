@@ -1,0 +1,23 @@
+version: '3.7'
+services:
+  mysql8:
+    image: mysql:8
+    container_name: mysql8
+    ports:
+      - "3307:3306"
+    environment:
+      - TZ=Asia/Shanghai
+      - MYSQL_ROOT_PASSWORD=Bell.ai2020
+    volumes:
+      - ./mysql/conf:/etc/mysql
+      - ./mysql/logs:/var/log/mysql
+      - ./mysql/data:/var/lib/mysql
+      - ./mysql/files:/var/lib/mysql-files
+    restart: always
+#    networks:
+#      - service_net
+
+#networks:
+#  service_net:
+#   external:
+#      name: service_default
