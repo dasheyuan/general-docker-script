@@ -24,7 +24,7 @@ services:
       --log-package-levels info
       --log-output stderr
     volumes:
-      - "/root/service_docker/etcd_server/tmp:/etcd-data"
+       - "/root/service_docker/etcd_server/tmp:/etcd-data"
       # - type: bind
       #   source: /root/service_docker/etcd_server/tmp
       #   target: /etcd-data

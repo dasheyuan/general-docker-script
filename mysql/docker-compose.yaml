@@ -4,7 +4,7 @@ services:
     image: mysql:8
     container_name: mysql8
     ports:
-      - "3307:3306"
+      - "33061:3306"
     environment:
       - TZ=Asia/Shanghai
       - MYSQL_ROOT_PASSWORD=Bell.ai2020
